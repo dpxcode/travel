@@ -12,7 +12,7 @@
 	<artifactId>travel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>travel</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Travel project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -34,6 +34,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
 		</dependency>
 
 		<dependency>
