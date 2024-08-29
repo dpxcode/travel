@@ -27,6 +27,7 @@ public class AuthController {
 
 
     // Create a New User
+    @SuppressWarnings("rawtypes")
     @PostMapping
     public ResponseEntity createUser(@Valid @RequestBody User user, BindingResult result) {
 
