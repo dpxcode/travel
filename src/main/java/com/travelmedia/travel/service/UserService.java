@@ -35,6 +35,16 @@ public class UserService {
                 .orElseThrow(() -> new RuntimeException("User not found with id " + id));
     }
 
+    // method to check if a user exists by email
+    public boolean existsByEmail(String email) {
+        return userRepository.existsByEmail(email);
+    }
+
+    // method to check if a user exists by username
+    public boolean existsByUsername(String username) {
+        return userRepository.existsByUsername(username);
+    }
+
     public void deleteUser(String id) {
         userRepository.deleteById(id);
     }
