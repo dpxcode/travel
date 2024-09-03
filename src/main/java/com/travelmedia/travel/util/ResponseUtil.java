@@ -1,4 +1,4 @@
-package com.travelmedia.travel.utils;
+package com.travelmedia.travel.util;
 
 import java.util.HashMap;
 

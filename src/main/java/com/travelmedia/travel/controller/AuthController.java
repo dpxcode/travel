@@ -13,9 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.travelmedia.travel.model.User;
 import com.travelmedia.travel.service.UserService;
-import com.travelmedia.travel.utils.ResponseUtil;
+import com.travelmedia.travel.util.JWTUtil;
+import com.travelmedia.travel.util.ResponseUtil;
 
 import jakarta.validation.Valid;
+import java.util.List; 
 
 @RestController
 @RequestMapping("/api/signup")
@@ -52,7 +54,8 @@ public class AuthController {
             userRegisterDto.setEmail(user.getEmail());
             userRegisterDto.setUsername(user.getUsername());
             userRegisterDto.setDisplayName(user.getDisplayName());
-            userRegisterDto.setToken("token string");
+            userRegisterDto.setToken(JWTUtil.generateToken(List.of(user.getId().toString(), user.getEmail(), user.getUsername())));
+            
             userRegisterDto.setPhotoUrl(user.getPhotoUrl());
             
             // userRegisterDto should be returned as an object
